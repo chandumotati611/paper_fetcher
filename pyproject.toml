@@ -13,8 +13,14 @@ dependencies = [
 ]
 
 [tool.poetry]
+name = "paper_fetcher"
+version = "0.1.0"
+description = "Fetch research papers from PubMed"
+authors = ["chandumotati611"]
 packages = [{include = "paper_fetcher", from = "src"}]
 
+[tool.poetry.scripts]
+get-papers-list = "paper_fetcher.cli:main"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
